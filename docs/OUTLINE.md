@@ -4,7 +4,7 @@
 
 - Apresentação da disciplina (objetivo, conteúdo, avaliação, comunicação e bibliografia)
 
-*Exercício*
+### Exercício
 
 * Analisar o site da disciplina e acesso o slack
 
