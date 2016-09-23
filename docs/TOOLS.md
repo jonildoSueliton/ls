@@ -13,3 +13,7 @@
 ## Versionamento de código
 - [Git](https://git-scm.com/)
 - [Github](https://github.com/)
+
+## Ferramenta de documentação
+- [devdocs.io](http://devdocs.io/javascript)
+- [kapeli](https://kapeli.com/mdn_offline)
