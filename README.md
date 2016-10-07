@@ -31,7 +31,7 @@ Dentre os principais temas que serão abordados na disciplina pode-se listar:
 * Frameworks
   * Fundamentos e demonstração
 
-Além disso, é possível visualizar os detalhes do [roteiro das aulas](docs/OUTLINE.md), das [ferramentas utilizadas](docs/TOOLS.md) e dos [links úteis](docs/RESOURCES.md).
+Além disso, é possível visualizar os detalhes do [roteiro das aulas](docs/OUTLINE.md), das [ferramentas utilizadas](docs/TOOLS.md) e de alguns [links úteis](docs/RESOURCES.md).
 
 ## Avaliações
 
