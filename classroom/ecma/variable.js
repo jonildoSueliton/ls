@@ -36,7 +36,9 @@ outroNome = 10;
 console.log(outroNome); //ReferenceError
 var outroNome = 10;
 
+// Destructuring assignment
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+// [a, b] = [1, 2]
 var number1, number2;
 [number1, number2] = [8, 80];
 console.log(number1);
@@ -46,3 +48,5 @@ var number, string;
 [number, string] = [8, 'fulano'];
 console.log(number);
 console.log(string);
+
+// {a, b} = {a:1, b:2}
