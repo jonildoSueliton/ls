@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="operand1">
+  <input type="text" id="operand2">
+  <button onclick="calc()">+</button>
+  <button>-</button>
+  <input type="text" id="result">
+  <script>
+    function calc(){
+      var operand1 = document.querySelector('#operand1').value;
+      document.querySelector('#result').value = operand1;
+    }
+  </script>
+</body>
+</html>

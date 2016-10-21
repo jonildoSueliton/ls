@@ -52,6 +52,36 @@ for(let flag = 0; flag < 100; flag++){
 }
 console.log(result);
 
+// for..of
+var numbers = [1, 2, 3, 4];
+for(let number of numbers){
+  console.log(number);
+}
+
+var numbers = [1, 2, 3, 4];
+// numbers['number'] = 10;
+for(let [index, number] of numbers.entries()){
+  console.log(`${index} => ${number}`);
+}
+
+
+// for..in
+var numbers = [1, 2, 3, 4];
+for(let index in numbers){
+  console.log(index);
+}
+
+var student = {
+  "id": 1,
+  "name": "fulano",
+  "email": "fulano@gmail.com"
+}
+console.log(student.name);
+console.log(student['name']);
+for(let index of Object.keys(student)){
+  console.log(student[index]);
+}
+
 // while
 
 // do-while

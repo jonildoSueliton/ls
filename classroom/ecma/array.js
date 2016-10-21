@@ -53,12 +53,53 @@ students[0].email; //=> 'fulano@gmail.com'
 // spread operator
 
 // interaction: for, for..of, for..in, for([key, value] of [].entries())
-ips = [
+var numbers = [1, 2, 4, 7];
+var result = '';
+for (var flag = 0; flag < numbers.length; flag++) {
+  result += numbers[flag]+' ';
+}
+console.log(result);
+
+// for..in
+var values = [];
+values[0] = 1;
+values['number'] = 10;
+values[1] = 20;
+
+for(let index in values){
+  console.log(`${index} => ${values[index]}`);
+}
+
+var ips = [
   {address: "192.168.0.2", mask: "255.255.255.0"},
   {address: "192.168.0.10", mask: "255.255.255.0"},
   {address: "192.168.0.26", mask: "255.255.255.0"},
   {address: "192.168.0.30", mask: "255.255.255.0"}
 ]
+
+// for(let ip of ips){
+//   console.log(ip.address+'/'+ip.mask);
+// }
+
+for(let ip of ips){
+  let row = '';
+  for(let key of Object.keys(ip)){
+    row += ip[key]+' ';
+  }
+  console.log(row);
+}
+
+// 192.168.0.2 / 255.255.255.0
+// 192.168.0.10 / 255.255.255.0
+// 192.168.0.26 / 255.255.255.0
+// 192.168.0.30 / 255.255.255.0
+
+result = '<table>';
+for(let ip of ips){
+  result += '<tr><td>'+ip.address+'</td><td>'+ip.mask+'</td></tr>';
+}
+result += '</table>';
+console.log(result);
 
 // OO
 // Properties:
