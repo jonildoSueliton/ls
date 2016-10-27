@@ -1,3 +1,0 @@
-// function constructor
-// json
-// interaction

@@ -1,7 +1,10 @@
-// if-else, ?:
+// Statements
+//  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Statements
+
+// Control flow (block, break, continue, empty, if...esle, switch, throw, try...catch)
+//  if...else (does not executes: false, 0, "", null, undefined, NaN)
 var number = 10;
 var result;
-
 if(number < 0) {
   result = "menor que zero";
 } else if (number > 0) {
@@ -9,17 +12,15 @@ if(number < 0) {
 } else {
   result = "igual a zero";
 }
-
 console.log(result);
 
 // switch
-
 var number1 = 10;
 var number2 = 10;
 var operator = '+'; // (+, -, *, /)
 var result;
-
-switch(operator) {
+switch(operator) { // strict comparison
+  case 'add':
   case '+':
     result = number1 + number2;
     break;
@@ -35,11 +36,10 @@ switch(operator) {
   default:
     result = 0;
 }
-
 console.log(result);
 
-// for
-
+// Iterations (do...while, for, for...in, for...of, while)
+//  for
 for(let flag = 0; flag < 100; flag++){
     console.log(flag);
 }
@@ -52,7 +52,7 @@ for(let flag = 0; flag < 100; flag++){
 }
 console.log(result);
 
-// for..of
+//  for...of: Iterates over iterable objects (including arrays, array-like objects, iterators and generators)
 var numbers = [1, 2, 3, 4];
 for(let number of numbers){
   console.log(number);
@@ -64,8 +64,7 @@ for(let [index, number] of numbers.entries()){
   console.log(`${index} => ${number}`);
 }
 
-
-// for..in
+//  for...in: Iterates over the enumerable properties of an object
 var numbers = [1, 2, 3, 4];
 for(let index in numbers){
   console.log(index);
@@ -76,12 +75,26 @@ var student = {
   "name": "fulano",
   "email": "fulano@gmail.com"
 }
-console.log(student.name);
-console.log(student['name']);
+// console.log(student.name);
+// console.log(student['name']);
 for(let index of Object.keys(student)){
   console.log(student[index]);
 }
 
-// while
+//  while
+var result = ""
+while(result.length < 4){
+  result += 'x';
+  console.log(result);
+}
 
-// do-while
+//  do...while
+var result = ""
+do{
+  result += 'x';
+  console.log(result);
+}while(result.length < 4)
+
+// Others (debugger, export, import, label)
+// Declarations (var, let, const)
+// Functions and classes (function, function*, return, class)
