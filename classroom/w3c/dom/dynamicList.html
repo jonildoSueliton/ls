@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="count">
+  <button id="gerar">Gerar</button>
+  <ul id="list"></ul>
+  <script>
+    const countElement = document.querySelector('#count');
+    const gerarElement = document.querySelector('#gerar');
+    const listElement = document.querySelector('#list');
+
+    loadClick();
+
+    function loadClick(){
+      gerarElement.onclick = () => generateList()
+    }
+
+    function generateList(){
+      let count = countElement.value;
+      let result = '';
+      for(let flag = 1; flag <= count; flag++){
+        result += `<li>Item ${flag}</li>`;
+      }
+      listElement.innerHTML = result;
+    }
+
+  </script>
+</body>
+</html>

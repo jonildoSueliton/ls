@@ -9,13 +9,31 @@
 <body>
   <input type="text" id="operand1">
   <input type="text" id="operand2">
-  <button onclick="calc()">+</button>
-  <button>-</button>
+  <button onclick="addition()">+</button>
+  <button onclick="subtraction()">-</button>
+  <button onclick="multiplication()">*</button>
+  <button onclick="division()">/</button>
   <input type="text" id="result">
   <script>
-    function calc(){
+    function addition(){
       var operand1 = document.querySelector('#operand1').value;
-      document.querySelector('#result').value = operand1;
+      var operand2 = document.querySelector('#operand2').value;
+      document.querySelector('#result').value = parseInt(operand1)+parseInt(operand2);
+    }
+    function subtraction(){
+      var operand1 = document.querySelector('#operand1').value;
+      var operand2 = document.querySelector('#operand2').value;
+      document.querySelector('#result').value = operand1-operand2;
+    }
+    function multiplication(){
+      var operand1 = document.querySelector('#operand1').value;
+      var operand2 = document.querySelector('#operand2').value;
+      document.querySelector('#result').value = operand1*operand2;
+    }
+    function division(){
+      var operand1 = document.querySelector('#operand1').value;
+      var operand2 = document.querySelector('#operand2').value;
+      document.querySelector('#result').value = operand1/operand2;
     }
   </script>
 </body>

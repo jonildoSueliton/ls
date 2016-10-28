@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="operand1">
+  <input type="text" id="operand2">
+  <button>+</button>
+  <button>-</button>
+  <button>*</button>
+  <button>/</button>
+  <input type="text" id="result">
+  <script>
+    const operand1Element = document.querySelector('#operand1');
+    const operand2Element = document.querySelector('#operand2');
+    const resultElement = document.querySelector('#result');
+    const buttonsElement = Array.from(document.querySelectorAll('button'));
+
+    loadClicks();
+
+    function loadClicks(){
+      for(var button of buttonsElement){
+        button.onclick = () => calcAction(button.innerHTML);
+      }
+    }
+
+    function calcAction(operator){
+      let operand1 = operand1Element.value;
+      let operand2 = operand2Element.value;
+      let result = calcArithmetic(operand1, operand2, operator);
+      resultElement.value = result;
+    }
+
+    function calcArithmetic(operand1, operand2, operator){
+      switch (operator) {
+        case '+':
+          return parseFloat(operand1) + parseFloat(operand2);
+        case '-':
+          return operand1 - operand2;
+        case '*':
+          return operand1 * operand2;
+        case '/':
+          return operand1 / operand2;
+      }
+    }
+  </script>
+</body>
+</html>

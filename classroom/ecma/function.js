@@ -50,12 +50,19 @@ function addition(param1, param2){
 }
 
 // Case Sensitive
+function addition(param1, param2){
+  return param1 + param2;
+}
 function Addition(param){
   return param + 1;
 }
 console.log(Addition(1));
+console.log(Addition(1, 2));
 
 // overload
+function addition(param1, param2){
+  return param1 + param2;
+}
 function addition(param){
   return param + 1;
 }
@@ -71,11 +78,12 @@ console.log(addition(1));
 
 // Destructuring Assignment
 function addition(param1, param2, param3, param4){
-  return param1 + param2 + param2 + param2;
+  return param1 + param2 + param3 + param4;
 }
 console.log(addition(...[1, 2, 1, 2]));
 console.log(addition(...[1, 2], ...[1, 2]));
-console.log(addition(...[1, 2], 1, ...[1]));
+console.log(addition(...[1, 2], 1, ...[2]));
+console.log(addition(...[1, 2], 1, ...[1, 2]));
 
 function addition({a = 0, b = 0}){
   return a + b;
@@ -99,19 +107,31 @@ console.log(addition(1, 1, 1, 1));
 
 // Rest parameters (spread) ES6
 function addition(...params){
-  return params.reduce((summation, number) => summation + number);
+  var summation = 0;
+  for(let value of params){
+    summation += value;
+  }
+  return summation;
 }
-console.log(addition(1));
-console.log(addition(1, 1));
-console.log(addition(1, 1, 1, 1));
+console.log(addition(1)); // ([1])
+console.log(addition(1, 1)); //([1, 1])
+console.log(addition(1, 1, 1, 1)); //([1, 1, 1, 1])
 
 function addition(param, ...params){
-  return param + params.reduce((summation, number) => summation + number);
+  var summation = 0;
+  for(let value of params){
+    summation += value;
+  }
+  return summation + param;
 }
-console.log(addition(1, 1));
-console.log(addition(1, 1, 1, 1));
+console.log(addition(1, 1)); //(1, [1])
+console.log(addition(1, 1, 1, 1)); //(1, [1, 1, 1])
 
 // Function expression
+function(param1, param2){ // anonymous function
+  return param1 + param2;
+}
+
 const addition = function(param1, param2){ // anonymous function
   return param1 + param2;
 }
@@ -137,6 +157,7 @@ var ip = {
     return `${this.address}/${this.mask}`
   }
 }
+console.log(ip.address);
 console.log(ip.toString());
 
 // Closure
@@ -161,8 +182,10 @@ c = addSquares(4,5); // returns 41
 
 // es6 Arrow Function (=>)
 const sum = function(param1, param2){ return param1 + param2 };
+
 const sum = (param1, param2) => { return param1 + param2 };
 const sum = (param1, param2) => param1 + param2;
+
 console.log([1,1,1].reduce((sum,value) => sum+value));
 console.log([1,1,1].reduce(function(sum,value){return sum+value}, 0));
 

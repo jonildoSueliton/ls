@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    table {
+      margin: auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #000;
+    }
+    th {
+      background-color: #ccc; 
+    }
+  </style>
+</head>
+<body>
+  <table id="cep">
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script>
+    // viacep.com.br/ws/01001000/json/
+    const cep = {
+      cep: "01001-000",
+      logradouro: "Praça da Sé",
+      complemento: "lado ímpar",
+      bairro: "Sé",
+      localidade: "São Paulo",
+      uf: "SP",
+      unidade: "",
+      ibge: "3550308",
+      gia: "1004"
+    };
+    const tbodyElement = document.querySelector('#cep tbody');
+
+    loadCEPInfo();
+
+    function loadCEPInfo(){
+      let tableRows = '';
+      for(let field of Object.keys(cep)){
+        tableRows += `<tr><td>${field}</td><td>${cep[field]}</td></tr>`;
+      }
+      tbodyElement.innerHTML = tableRows;
+    }
+  </script>
+</body>
+</html>
