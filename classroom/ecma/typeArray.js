@@ -145,7 +145,9 @@ console.log([ 1, 2].concat([ "hello", true, 7 ]));
 //            entries, keys, values
 for([key, value] of [1,2,3].entries()){console.log(`${key} => ${value}`);}
 [1, 2, 3, 4, 5, 6].forEach(function(value){console.log(value)});
+[1, 2, 3, 4, 5, 6].forEach(function(value, index){console.log(value+' '+index)});
 [1, 2, 3, 4, 5, 6].forEach((value) => console.log(value));
+[1, 2, 3, 4, 5, 6].forEach((value, index) => console.log(value+' '+index));
 console.log([1, 2, 3, 4, 5, 6].map((value) => value * 2));
 console.log([1, 2, 3, 4, 5, 6].reduce((addition, value) => addition + value));
 console.log([1, 2, 3, 4, 5, 6].reduceRight((addition, value) => addition + value));
