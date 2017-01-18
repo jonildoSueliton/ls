@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: auto;
+    }
+    td {
+      border: 1px solid #000;
+    }
+    table td {
+      width: 10%;
+      height: 25px;
+    }
+  </style>
+</head>
+<body>
+  <table id="colors"></table>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-js/1.0.1/color.min.js"></script>
+  <script>
+    const Color = net.brehaut.Color;
+    const tableElement = document.querySelector('#colors');
+
+    var colors = [];
+    var tableContent = '<tr>';
+
+    for(let hue = 1; hue <= 360; hue++){
+      let hslValue = `hsl(${hue}, 50%, 50%)`;
+      let rgbValue = Color(hslValue).toRGB().toCSSHex();
+      colors.push(rgbValue);
+    }
+
+    colors.forEach(function(color, index){
+      tableContent += `<td style="background-color:${color}">${color}</td>`;
+      if((index+1) % 10 == 0 && index != colors.length - 1)
+        tableContent += '</tr><tr>';
+    });
+    tableContent += '</tr>';
+
+    tableElement.innerHTML = tableContent;
+  </script>
+</body>
+</html>

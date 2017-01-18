@@ -12,7 +12,7 @@
       border: 1px solid #000;
     }
     th {
-      background-color: #ccc; 
+      background-color: #ccc;
     }
   </style>
 </head>
@@ -26,19 +26,8 @@
     </thead>
     <tbody></tbody>
   </table>
+  <script src="getCEPInfo.js"></script>
   <script>
-    // viacep.com.br/ws/01001000/json/
-    const cep = {
-      cep: "01001-000",
-      logradouro: "Praça da Sé",
-      complemento: "lado ímpar",
-      bairro: "Sé",
-      localidade: "São Paulo",
-      uf: "SP",
-      unidade: "",
-      ibge: "3550308",
-      gia: "1004"
-    };
     const tbodyElement = document.querySelector('#cep tbody');
 
     loadCEPInfo();
