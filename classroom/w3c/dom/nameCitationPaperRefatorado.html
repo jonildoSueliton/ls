@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="sourceName">
+  <button id="converter">Converter</button>
+  <input type="text" id="targetName">
+
+  <script>
+    const sourceName = document.querySelector('#sourceName');
+    const targetName = document.querySelector('#targetName');
+    const converter = document.querySelector('#converter');
+
+    converter.onclick = function (){
+      targetName.value = toCitationName(sourceName.value);
+    }
+
+    function toCitationName(sourceName){
+      let words = sourceName.split(' ');
+      let lastWord = words.pop();
+      words = words.map((word) => word[0].toUpperCase() + '.' );
+      words.unshift(lastWord.toUpperCase() + ';');
+      return words.join(' ');
+    }
+  </script>
+</body>
+</html>

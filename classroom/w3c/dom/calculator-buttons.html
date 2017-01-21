@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #display {
+      display: block;
+      width: 90%;
+      margin: auto;
+      text-align: right;
+      font-size: 2em;
+    }
+    #calculator {
+      width: 400px;
+      margin: auto;
+    }
+    #buttons button {
+      width: 24%;
+    }
+  </style>
+</head>
+<body>
+  <section id="calculator">
+    <input type="text" id="display" readonly>
+    <secition id="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>/</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>*</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button>
+      <button>0</button>
+      <button>C</button>
+      <button>=</button>
+      <button>+</button>
+    </secition>
+  </section>
+  <script>
+    const display = document.querySelector('#display');
+    let buttons = document.querySelectorAll('#buttons button')
+
+    for(let button of buttons){
+      button.onclick = function(){
+        let character = button.innerHTML;
+        if(character == '='){
+          calc();
+        } else if(character == 'C'){
+          clearDisplay();
+        } else {
+          insertIntoDisplay(character);
+        }
+      }
+    }
+
+    function insertIntoDisplay(character){
+      display.value += character;
+    }
+
+    function clearDisplay(){
+      display.value = '';
+    }
+
+    function calc(){
+      display.value = eval(display.value);
+    }
+
+  </script>
+</body>
+</html>
