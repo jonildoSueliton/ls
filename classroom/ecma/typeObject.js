@@ -81,6 +81,22 @@ post.toHTML = function(){
 }
 console.log(post.toHTML());
 
+var person = {
+  name: "fulano",
+  email:"fulano@gmail",
+  showPerson: function(){
+    return `${this.name} - ${this.email}`;
+  }
+}
+console.log(person.showPerson());
+
+// var person = {
+//   name: "fulano",
+//   email:"fulano@gmail",
+//   showPerson: () => {return `${this.name} - ${this.email}`
+// }
+// console.log(person.showPerson());
+
 var ip = {
   address: '192.168.0.2',
   mask: '24',

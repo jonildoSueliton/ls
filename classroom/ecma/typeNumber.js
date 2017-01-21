@@ -85,9 +85,16 @@ console.log(parseInt("F"));
 console.log(parseInt("F", 10));
 console.log(parseInt("F", 16)); // 15
 // Number.prototype.toString()
+console.log(15.toString(16)); // f
 console.log(Number(15).toString(16)); // f
 console.log(Number(15).toString(2)); // 1111
 console.log(Number(15412341234).toString(32));
+var number = 15;
+console.log(number.toString(16));
+var number = Number(15);
+console.log(number.toString(16));
+var number = new Number(15);
+console.log(number.toString(16));
 // Number.prototype.toExponential()
 console.log(Number(2222.22222).toExponential());
 // Number.prototype.toFixed()
