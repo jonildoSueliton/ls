@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #characterTable {
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <table id="characterTable">
+    <thead>
+      <th></th>
+      <th>Character</th>
+      <th>Named character</th>
+      <th>Decimal numeric character</th>
+      <th>Hexadecimal numeric character</th>
+      <!-- <th>Unicode code point</th> -->
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <!-- https://www.w3.org/TR/html5/entities.json -->
+  <script src="entities.json"></script>
+  <script>
+    const characterTable = document.querySelector('#characterTable tbody');
+
+    loadCharacterTable();
+
+    function loadCharacterTable(){
+        let rows = '';
+        let nameds = Object.keys(entities);
+        let characters = Object.values(entities);
+        characterTable.innerHTML = characters
+          .map((character, index) => {
+            let symbol = character.characters;
+            let named = nameds[index];
+            let decimal = character.codepoints[0];
+            let hexa = decimal.toString(16);
+            named = named.replace("&","&amp;")
+            return `<tr>
+                      <td>${index+1}</td>
+                      <td>${symbol}</td>
+                      <td>${named}</td>
+                      <td>&amp;${decimal};</td>
+                      <td>&amp;#${hexa};</td>
+                    </tr>`;
+                    // <td>U+${hexa}</td>
+          })
+          .join('');
+    }
+  </script>
+</body>
+</html>

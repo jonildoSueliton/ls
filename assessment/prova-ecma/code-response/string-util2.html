@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    section {
+      margin: auto;
+      width: 400px;
+      text-align: center;
+    }
+    textarea {
+      width: 90%;
+      height: 100px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <textarea id="sourceText"></textarea><br>
+    <input type="button" value="Lowercase" id="lowercase">
+    <input type="button" value="Reverse" id="reverse">
+    <input type="button" value="Word Count" id="wordCount"><br>
+    <textarea id="targetText"></textarea>
+  </section>
+  <script>
+    const sourceText = document.querySelector('#sourceText');
+    const targetText = document.querySelector('#targetText');
+    const reverse = document.querySelector('#reverse');
+    const lowercase = document.querySelector('#lowercase');
+    const wordCount = document.querySelector('#wordCount');
+
+    loadClickButtons();
+
+    function loadClickButtons(){
+      reverse.addEventListener("click", () => clickProcessText("reverse"), false)
+      lowercase.addEventListener("click", () => clickProcessText("lowercase"), false)
+      wordCount.addEventListener("click", () => clickProcessText("wordCount"), false)
+    }
+
+    function clickProcessText(action){
+      targetText.value = processText(sourceText.value, action);
+    }
+
+    function processText(text, action){
+      switch (action) {
+        case "reverse":
+          return text.split('').reverse().join('');
+        case "lowercase":
+          return text.toLowerCase();
+        case "wordCount":
+          return text.replace('\n', ' ').split(' ').length;
+      }
+    }
+  </script>
+</body>
+</html>
