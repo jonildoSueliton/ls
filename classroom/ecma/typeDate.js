@@ -30,6 +30,8 @@ console.log(Date.parse("Dec 25, 1995"));
 console.log(Date.parse('12/25/2014'));
 console.log(Date.parse('12 25 2014'));
 console.log(Date.parse('Wed, 09 Aug 1995'));
+console.log(isNaN(Date.parse(`${10}/${30}/${2016}`)));
+console.log(isNaN(Date.parse(`${10}/${40}/${2016}`)));
 
 // Getter
 var date = new Date();

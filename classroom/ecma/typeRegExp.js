@@ -145,7 +145,8 @@ x(?!y) // negative lookahead, x only if x is not followed by y
 0x1f
 0x1F
 0X1f
-0X1F
+0X1FFFF
+/0[xX][\dA-F]+/
 
 // ip
 999.999.999.999
@@ -158,6 +159,7 @@ x(?!y) // negative lookahead, x only if x is not followed by y
 // cpf
 11122233344
 111.222.333-44
+(\d{9}|\d{3}(\.\d{3}){2}-\d{2})
 
 // hora
 12:12:12
