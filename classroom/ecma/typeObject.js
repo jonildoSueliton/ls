@@ -90,12 +90,13 @@ var person = {
 }
 console.log(person.showPerson());
 
-// var person = {
-//   name: "fulano",
-//   email:"fulano@gmail",
-//   showPerson: () => {return `${this.name} - ${this.email}`
-// }
-// console.log(person.showPerson());
+// Arrow functions do not define ("bind") their own this
+var person = {
+  name: "fulano",
+  email:"fulano@gmail",
+  showPerson: () => `${this.name} - ${this.email}`
+}
+console.log(person.showPerson());
 
 var ip = {
   address: '192.168.0.2',
