@@ -14,22 +14,28 @@ Dentre os principais temas que serão abordados na disciplina pode-se listar:
 
 * Introdução à Linguagem de Script
   * Fundamentos
-  * Linguagem Javascript
+  * Linguagem Javascript: Padrão ECMA, W3C e Biblioteca ou Frameworks
 * Sintaxe Javascript
+  * Introdução
   * Elementos básicos
   * Expressões
   * Sentenças
   * Funções
   * Objetos
-  * Objetos Nativos
-  * Expressão Regular
+* Objetos do Javascript
+  * String, Number, Array
+  * RegExp
+  * Date
+* Recursos do Navegador
+  * Fundamentos
   * Eventos
-* Objetos do W3C
+  * Objetos do Browser
   * API DOM
-  * Objetos do Window
+  * HTML DOM
   * AJAX & Fetch API
 * Frameworks
-  * Fundamentos e demonstração
+  * Fundamentos
+  * Demonstração
 
 Além disso, é possível visualizar os detalhes do [roteiro das aulas](docs/OUTLINE.md), das [ferramentas utilizadas](docs/TOOLS.md) e de alguns [links úteis](docs/RESOURCES.md).
 
