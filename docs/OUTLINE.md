@@ -42,13 +42,13 @@
 - Variável
 - Funções
 
-## Aula - (27/10)
+## Aula 05- (27/10)
 - Tramento de Eventos
   - Exemplo da Calculadora
 - Geração dinâmica de conteúdo
   - cep info, lista dinâmica
 
-## Aula 05 - (04/11)
+## Aula 06 - (04/11)
 - Objeto String
 - Objeto Array  
 - Simulado
@@ -56,61 +56,60 @@
   - cepinfo
   - post
 
-## Aula 06 - (20/01)
+## Aula 07 - (20/01)
 - Simulado
   - métodos de interação com Array: forEach, map, filter, reduce
   - calculadora com input
   - Processador de texto com camel case
 
-## Aula 07 - (21/01)
+## Aula 08 - (21/01)
 - Simulado
   - citation name
   - calculadora de buttons
   - select dinâmico
 
-## Aula 08 - (27/01)
+## Aula 09 - (27/01)
 - Avaliação I
 
-## Aula 09 - (03/02)
+## Aula 10 - (03/02)
 - Date
 - moment.js
 - RegExp
 
-## Aula 10 - (10/02)
+## Aula 11 - (10/02)
 - RegExp
 - Apresentação do Projeto e Blog
 
-## Aula 11 - (11/02)
-- módulos
-- webpack
+## Aula 12 - (11/02)
+- iife
+- módulos es6, import, export
+- npm, yarn, webpack
 
-## Aula 12 - (17/02)
+## Aula 13 - (17/02)
 - Fundamentos dos Recursos do Navegador
-- Eventos
-- Objetos do Browser
+- AJAX
+- Fetch API
+- Simulado
 
-## Aula 13 - (24/02)
+## Aula 14 - (24/02)
+- Objetos do Browser
 - API DOM
 - HTML DOM
 
-## Aula 14 - (03/03)
+## Aula 15 - (03/03)
 - Jquery
 - Plugins do Jquery
 
-## Aula 15 - (10/03)
-- AJAX
-- Fetch API
-
-## Aula 16 - (17/03)
-- Simulado
-
-## Aula 17 - (17/03)
+## Aula 16 - (10/03)
 - Geolocation
 - Google Maps
 
+## Aula 17 - (17/03)
+- Avaliação II
+
 ## Aula 18 - (24/03)
 - Componentes Web do Twitter Bootstrap
-- chart.js
+- Gráficos com chart.js
 
 ## Aula 19 - (31/03)
 - Dúvidas do projeto
