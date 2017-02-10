@@ -107,30 +107,35 @@ $ // end
 // Quantifiers
 x*
   /<.*>/ // "<foo> <bar>" => "<foo> <bar>"
+  /\d*/ // abc12345678cde90fgh => 12345678, 90
 x+
   /\w+@\w+/ // root@ifpb => root@ifpb
   /\w+@\w+/ // root@1 => root@1
+  /\w+@\w+/ // root@ =>
   /\w+/ // root@ifpb => root, ifpb
+  /\d+/ // abc12345678cde90fgh => 12345678, 90
 x?
-  //
+  /\w+@\w?/ // root@ifpb => root@i
+  /\w+@\w?/ // root@1 => root@1
+  /\w+@\w?/ // root@ => root@
 x{n}
-  //
+  /\d{5}/ // abc12345678cde90fgh => 12345
 x{n,}
-  //
+  /\d{5,}/ // abc12345678cde90fgh => 12345678
 x{n,m}
-  //
+  /\d{1,5}/ // abc12345678cde90fgh => 12345, 678, 90
 x*?
-  /<.*?>/ // "<foo> <bar>" => "<foo>"
+  /<.*?>/ // "<foo> <bar>" => "<foo>", "<bar>"
 x+?
-  //
+  /\d+?/ // abc12345678cde90fgh => 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
 x??
-  //
+  /\d??/ // 12 => "", "", ""
 x{n}?
-  //
+  /\d{5}/ // abc12345678cde90fgh => 12345
 x{n,}?
-  //
+  /\d{5,}/ // abc12345678cde90fgh => 12345
 x{n,m}?
-  //
+  /\d{1,5}/ // abc12345678cde90fgh => 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
 
 // Assertions
 x(?=y) // positive lookahead, x only if x is followed by y
@@ -239,6 +244,9 @@ Minimum 8 and Maximum 10 characters at least 1 Uppercase Alphabet, 1 Lowercase A
 "mensagem <b>importante</b>".replace(/<b>(.*)<\/b>/,"<i>importante</i>")
 "mensagem <b>importante</b>".replace(/<b>(.*)<\/b>/,"<i>$1</i>")
 "mensagem <b>importante</b> e <b>interessante</b>".replace(/<b>(.*)<\/b>/,"<i>$1</i>")
+
+// input pattern
+<input type="text" pattern="\d{5}-\d{3}">
 
 // Problem
 // contain cep
