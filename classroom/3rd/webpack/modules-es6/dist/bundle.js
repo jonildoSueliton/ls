@@ -76,12 +76,16 @@
 const sqrt = Math.sqrt;
 /* unused harmony export sqrt */
 
+
 function square(x) {
     return x * x;
 }
+
 function diag(x, y) {
     return sqrt(square(x) + square(y));
 }
+
+// export {sqrt, square, diag};
 
 /***/ }),
 /* 1 */
@@ -17244,8 +17248,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__lib__["a" /* square */])(11));
 console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__lib__["b" /* diag */])(4, 3));
 
+// npm install lodash --save-dev
 
-console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash__["zip"])(['1', '2'], ['a', 'b']));
+console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash__["zip"])(['1', '2'], ['a', 'b'])); // [ [ '1', 'a' ], [ '2', 'b' ] ]
+console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_lodash__["uniq"])([1, 2, 1, 2, 3, 4]));
 
 /***/ })
 /******/ ]);
