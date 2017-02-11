@@ -70,6 +70,8 @@ new RegExp(/ab+c/, 'i');
 ^ // beginning
   /^instituto/ // instituto federal => instituto
   /^instituto/ // o instituto federal da paraíba =>
+  /^\w{4}/g // lorem\nipsum\ndolor => lore
+  /^\w{4}/gm // lorem\nipsum\ndolor => lore, ispu, dolo
 $ // end
   /federal$/ // instituto federal => federal
   /federal$/ // o instituto federal da paraíba =>
@@ -151,37 +153,47 @@ x(?!y) // negative lookahead, x only if x is not followed by y
 0x1F
 0X1f
 0X1FFFF
-/0[xX][\dA-F]+/
+/^0[xX][\dA-Fa-f]+$/
 
 // ip
-999.999.999.999
+255.255.255.255
+/^\d{3}\.\d{3}\.\d{3}\.\d{3}$/
+/^(\d{3}\.){3}\d{3}$/
 
 // cep
 01001000
 01001-000
 01.001-000
+/^\d{2}\.?\d{3}-?\d{3}$/
 
 // cpf
 11122233344
 111.222.333-44
-(\d{9}|\d{3}(\.\d{3}){2}-\d{2})
+/^(\d{9}|\d{3}(\.\d{3}){2}-\d{2})$/
 
 // hora
 12:12:12
 12:12
 23:12
+/^([0-1]\d|2[0-3])(:[0-5]\d){1,2}$/
 
 // data
 31/01/1970
 01/31/1970
 01-31-1970
 1970-01-31
+/^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/\d{4}|(0[1-9]|[12]\d|3[01])-(0[1-9]|1[0-2])-\d{4}$/
+// o sonho http://stackoverflow.com/questions/15491894/regex-to-validate-date-format-dd-mm-yyyy
 
 // number
-1000000
+1000000 // \d+
+10
 1.000.000
 1.000.000,0
 1.000.000,10
+/^(\d+|\d{1,3}(\.\d{3})*)(,\d{1,2})?$/
+
+1.100
 
 // currency
 R$ 1.000.000,10
@@ -237,6 +249,10 @@ Minimum 8 and Maximum 10 characters at least 1 Uppercase Alphabet, 1 Lowercase A
 // String
 "mensagem <b>importante</b>".match(/<b>(.*)<\/b>/)
 "mensagem <b>importante</b>".match(/ifpb/)
+"11:11:20".match(/([0-1]\d|2[0-3])(:[0-5]\d){1,2}/) // match and groups
+"11:11:20".match(/([0-1]\d|2[0-3])(:[0-5]\d){1,2}/g)
+
+"lorem ipsum\ndolor".split(/\s/)
 
 "mensagem <b>importante</b>".search(/<b>(.*)<\/b>/)
 "mensagem <b>importante</b>".search(/ifpb/)
@@ -244,6 +260,7 @@ Minimum 8 and Maximum 10 characters at least 1 Uppercase Alphabet, 1 Lowercase A
 "mensagem <b>importante</b>".replace(/<b>(.*)<\/b>/,"<i>importante</i>")
 "mensagem <b>importante</b>".replace(/<b>(.*)<\/b>/,"<i>$1</i>")
 "mensagem <b>importante</b> e <b>interessante</b>".replace(/<b>(.*)<\/b>/,"<i>$1</i>")
+"01/12/2017".replace(/(\d{2})\/(\d{2})\/(\d{4})/, "$3-$2-$1")
 
 // input pattern
 <input type="text" pattern="\d{5}-\d{3}">
@@ -255,3 +272,11 @@ var text = "Lorem ipsum 12345-123 dolor sit amet, 12345123 consectetur adipisici
 
 // format yyyy-mm-dd
 var date = "12/30/2016";
+
+// criar uma função para validar cpf e cnpj
+// tanto no padrão quanto no digito verificador
+// http://ghiorzi.org/DVnew.htm
+
+// validação de formulário
+
+// Será que é possível usar RegExp no campo de pesquisa do Atom?
