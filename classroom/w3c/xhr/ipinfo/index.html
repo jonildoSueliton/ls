@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="ip">
+  <button id="getInfo">Get Info</button>
+
+  <table id="tableInfo">
+    <thead>
+      <tr>
+        <th>Fields</th>
+        <th>Values</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const ip = document.querySelector('#ip');
+    const getInfo = document.querySelector('#getInfo');
+    const tableInfo = document.querySelector('#tableInfo');
+
+    loadGetInfoEvent();
+
+    function loadGetInfoEvent(){
+      getInfo.onclick = function(){
+        loadGetInfo();
+      }
+    }
+
+    function loadGetInfo(){
+      let url = `http://ipinfo.io/${ip.value}/json`;
+      getJSON( url, loadTableInfo );
+    }
+
+    function loadTableInfo( json ){
+      let ipInfo = JSON.parse( json );
+      
+    }
+
+    function getJSON( url, callback ){
+      let xhr = new XMLHttpRequest();
+      xhr.onload = () => callback( xhr.responseText );
+      xhr.open( 'GET', url );
+      xhr.send();
+    }
+  </script>
+</body>
+</html>
