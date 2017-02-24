@@ -18,6 +18,52 @@ Assim, será exigido que a apresentação possua um tempo máximo de 3 minutos e
 * Alguma seleção de telas de sistemas existentes que façam algo semelhante ao que será proposto, ou seja, não precisamos reinventar a roda sempre;
 * E por fim, deve-se apresentar alguns esboços de tela de como a equipe enxerga o protótipo final do projeto, pode ser até mesmo rabiscos no papel, pois o que importa é que fique claro as interações do sistema e sua navegabilidade.
 
+## Equipes
+
+**Equipe #1**: [Battlefield stats]()
+
+> Membros:
+* Ewerton Furtado de Sousa - 20161370010
+* Joseph Santos - 20161370018
+* Glaucio Mendonça - 20161370003
+
+**Equipe #2**: [OMDbTorrent]()
+
+> Membros:
+* Ronily Gomes Morais - 20161370008
+* Victor Emanuel Ramalho - 20161370011
+* Mateus Tavares Cosme - 20161370024
+
+**Equipe #3**: [NEW YORK TIMES API]()
+
+> Membros:
+* José Raimundo Fernandes Filho - 20152370123
+* Fan Clemente Dutra -
+* Helena Juliana Barros Miguel- 20142370279
+
+**Equipe #4**: [DEVBLOG]()
+
+> Membros:
+* João Pedro Albuquerque de Barros - 20161370040
+* Mayara Gomes Pereira - 20161370013
+* Peron Arruda -
+
+**Equipe #5**: [APIvagalume]()
+
+> Membros:
+* Jonildo suéliton - 20161370001
+
+**Equipe #6**: [APIturismo]()
+
+> Membros:
+* Anderson Fabricio -
+
+**Equipe #7**: [?]()
+
+> Membros:
+* Rayssa -
+* Adjamilton -
+
 ## Exigências do Projeto
 
 Nesta seção será apresentada as exigências do projeto que nortearam os critérios de avaliação que definiram a pontuação final.
