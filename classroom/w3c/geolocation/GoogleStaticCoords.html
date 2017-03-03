@@ -24,8 +24,10 @@
 	}
 	function getPosition(position){
 		var latlon = position.coords.latitude+","+position.coords.longitude;
-		var url = "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false";
-		output.innerHTML = "<img id=\"mapa\" src=\""+url+"\" alt=\"Mapa\">";
+		var url = "http://maps.googleapis.com/maps/api/staticmap?"+
+							"center="+latlon+"&zoom=14&size=400x300&"+
+							"markers=color:blue%7C"+latlon;
+		output.innerHTML = `<img id="mapa" src="${url}" alt="Mapa">`;
 	}
 	function showError(error){
 	  switch(error.code){

@@ -18,37 +18,39 @@ Assim, será exigido que a apresentação possua um tempo máximo de 3 minutos e
 * Alguma seleção de telas de sistemas existentes que façam algo semelhante ao que será proposto, ou seja, não precisamos reinventar a roda sempre;
 * E por fim, deve-se apresentar alguns esboços de tela de como a equipe enxerga o protótipo final do projeto, pode ser até mesmo rabiscos no papel, pois o que importa é que fique claro as interações do sistema e sua navegabilidade.
 
-&#35; NOME-DO-PROJETO
-&#35;&#35; Descrição
-&#35;&#35; Objetivo
-&#35;&#35; Inspiração
-&#35;&#35; Protótipos
+<b>
+&#35; NOME-DO-PROJETO<br>
+&#35;&#35; Descrição<br>
+&#35;&#35; Objetivo<br>
+&#35;&#35; Inspiração<br>
+&#35;&#35; Protótipos<br>
 &#35;&#35; Recursos da API
+</b>
 
 ## Equipes
 
-**Equipe #1**: [Battlefield stats]()
+**Equipe #1**: [Battlefield stats](https://github.com/GlaucioMendonca/Projeto-LS)
 
 > Membros:
 * Ewerton Furtado de Sousa - 20161370010
 * Joseph Santos - 20161370018
 * Glaucio Mendonça - 20161370003
 
-**Equipe #2**: [OMDbTorrent]()
+**Equipe #2**: [OMDbTorrent](https://github.com/matthtavares/IFPB/tree/master/LinguagemDeScript/projeto)
 
 > Membros:
 * Ronily Gomes Morais - 20161370008
 * Victor Emanuel Ramalho - 20161370011
 * Mateus Tavares Cosme - 20161370024
 
-**Equipe #3**: [NEW YORK TIMES API]()
+**Equipe #3**: [NEW YORK TIMES API](https://github.com/jiyose12/New-York-Times-API-site)
 
 > Membros:
 * José Raimundo Fernandes Filho - 20152370123
 * Fan Clemente Dutra -
 * Helena Juliana Barros Miguel- 20142370279
 
-**Equipe #4**: [DEVBLOG]()
+**Equipe #4**: [DEVBLOG](https://github.com/joaopab1337/devblog)
 
 > Membros:
 * João Pedro Albuquerque de Barros - 20161370040
@@ -60,16 +62,16 @@ Assim, será exigido que a apresentação possua um tempo máximo de 3 minutos e
 > Membros:
 * Jonildo suéliton - 20161370001
 
-**Equipe #6**: [APIturismo]()
+**Equipe #6**: [APIturismo](https://github.com/andersonfabricio)
 
 > Membros:
 * Anderson Fabricio -
 
-**Equipe #7**: [?]()
+**Equipe #7**: [Projeto N](http://github.com/ajunior/fileserver)
 
 > Membros:
 * Rayssa -
-* Adjamilton -
+* Adjamilton - 20121610335
 
 ## Exigências do Projeto
 
