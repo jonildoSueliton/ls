@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DnD</title>
+	<style>
+	div {
+		border: dashed 3px #808080;
+		width: 40%;
+		height: 150px;
+		text-align: center;
+		font: 2em bold;
+		color: #808080;
+		padding: 10px;
+	}
+	</style>
+</head>
+<body>
+	<div id="drag" ondragover="allowDrop(event)" ondrop="drop(event)">Arraste uma/vários arquivo</div>
+	<output><ul id="output"></ul></output>
+	<script>
+	function allowDrop(ev){
+		ev.stopPropagation();
+		ev.preventDefault();
+		ev.dataTransfer.dropEffect = 'copy';
+	}
+
+	function drop(ev){
+		ev.stopPropagation();
+	    ev.preventDefault();
+		var files = ev.dataTransfer.files;
+		var filenames = "";
+		for(var flag = 0; flag < files.length; flag++){
+			filenames += "<li>"+files[flag].name+"</li>";
+		}
+		document.getElementById("output").innerHTML = filenames;
+	}
+	</script>
+</body>
+</html>

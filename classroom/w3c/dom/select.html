@@ -1,46 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
 </head>
 <body>
-  <select id="states"></select>
-  <select id="cities"></select>
-  <script>
-    const states = document.querySelector('#states');
-    const cities = document.querySelector('#cities');
-
-    var cityNames = new Array();
-    cityNames["Paraíba"] = "João Pessoa, Campina Grande, Cabedelo";
-    cityNames["Pernambuco"] = "Recife, Abeu e Lima, Caruaru";
-
-    laodStates();
-    states.onchange = function(){
-      loadCities();
-    }
-
-    function laodStates(){
-      let stateOptions = '';
-      for(let state in cityNames){
-        stateOptions += `<option>${state}</option>`
-      }
-      states.innerHTML = stateOptions;
-      loadCities();
-    }
-
-    function loadCities(){
-      let stateSelected = states.value;
-      let names = cityNames[stateSelected].split(', ');
-      let cityOptions = '';
-      for(let city of names){
-        cityOptions += `<option>${city}</option>`
-      }
-      cities.innerHTML = cityOptions;
-    }
-
-  </script>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, qui mollitia consequuntur unde animi praesentium tempore perferendis aut ipsam minus. A facere quam earum animi velit iste quaerat mollitia placeat.</p>
+	<select id="case">
+		<option value="uppercase">Maiúsculo</option>
+		<option value="lowercase">Minúsculo</option>
+	</select>
+	<script>
+		// Node > Element > HTMLElment > HTMLParagraphElement
+		// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
+		document.querySelector("#case").onchange = function(){
+			var paragraph = document.querySelector("p");
+			var value = this.options[this.selectedIndex].value;
+			paragraph.style.textTransform = value;
+		}
+	</script>
 </body>
 </html>

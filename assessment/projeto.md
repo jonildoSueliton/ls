@@ -18,6 +18,13 @@ Assim, será exigido que a apresentação possua um tempo máximo de 3 minutos e
 * Alguma seleção de telas de sistemas existentes que façam algo semelhante ao que será proposto, ou seja, não precisamos reinventar a roda sempre;
 * E por fim, deve-se apresentar alguns esboços de tela de como a equipe enxerga o protótipo final do projeto, pode ser até mesmo rabiscos no papel, pois o que importa é que fique claro as interações do sistema e sua navegabilidade.
 
+&#35; NOME-DO-PROJETO
+&#35;&#35; Descrição
+&#35;&#35; Objetivo
+&#35;&#35; Inspiração
+&#35;&#35; Protótipos
+&#35;&#35; Recursos da API
+
 ## Equipes
 
 **Equipe #1**: [Battlefield stats]()

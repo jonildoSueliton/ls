@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<style>
+		.fa-times:hover {
+			color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<table id="table">
+		<tr>
+			<td>Item 1</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="fa fa-times"></i></td>
+		</tr>
+		<tr>
+			<td>Item 1</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="fa fa-times"></i></td>
+		</tr>
+		<tr>
+			<td>Item 1</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="fa fa-times"></i></td>
+		</tr>
+		<tr>
+			<td>Item 1</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="fa fa-times"></i></td>
+		</tr>
+		<tr>
+			<td>Item 1</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="fa fa-times"></i></td>
+		</tr>
+	</table>
+	<script>
+		var removes = document.querySelectorAll("#table i.fa-times");
+		for(var indexRem in removes){
+			console.log(removes[indexRem]);
+			removes[indexRem].onclick = function(){
+				this.parentNode.parentNode.remove();
+			}
+		}
+	</script>
+</body>
+</html>	

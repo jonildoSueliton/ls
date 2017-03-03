@@ -1,0 +1,108 @@
+<!-- 
+TODO:
+quantidade
+total unitário 
+total geral
+editar quantidade
+css
+-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<style>
+		body {
+			font-family: helvetica, sans-serif;
+			background: #1abc9c;
+		}
+		table {
+			width: 40%;
+			color: #fff;
+		}
+		table, input[type=text] {
+			border: 2px solid #2c3e50;
+			color: #1abc9c;
+		}
+		div {
+			color: #fff;
+			width: 30%;
+			padding: 1%;
+			margin: .3%;
+			color: #1abc9c;
+			border-radius: 3px;
+		}
+		div input {
+			width: 65%;
+		}
+		label {
+			display: inline-block;
+			width: 30%;
+			text-align: right;
+		}
+		table, td, th {
+			border-collapse: collapse;
+		}
+		td {
+			color: #fff;
+		}
+		th , div{
+			background: #2c3e50;
+		}
+		.fa-times-circle {
+			color: #fff;
+		}
+		.fa-times-circle:hover {
+			color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<label for="description">Descrição</label> <input type="text" id="description">
+		<label for="price">Preço</label> <input type="text" id="price">
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>Descrição</th>
+				<th>Preço</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Item 2</td>
+				<td>Item 3</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			
+		</tfoot>
+	</table>
+	<i class="fa fa-times-circle"></i>
+	<script>
+		document.querySelector("div #price").onkeyup = function(event){
+			var description = document.querySelector("#description").value;
+			var price = this.value;
+			if(event.keyCode == 13){
+				document.querySelector("table tbody").innerHTML += '<tr>'+
+					'<td><input type="checkbox"></td>'+
+					'<td>'+description+'</td>'+
+					'<td>'+price+'</td>'+
+					'</tr>';
+			}
+		}
+		document.querySelector("i").onclick = function(){
+			var inputs = document.querySelectorAll("input:checked");
+			for(var index in inputs){
+				if(index != "length" & index != "item") {
+					inputs[index].parentNode.parentNode.remove();
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="clock"></p>
+	<script>
+	insertClockDiv();
+	function insertClockDiv(){
+		date = new Date();
+		date = Array(date.getHours(),date.getMinutes(), date.getSeconds());
+		document.querySelector('#clock').innerHTML = date.join(':');
+		setTimeout(insertClockDiv, 1000);
+	}
+	</script>
+</body>
+</html>

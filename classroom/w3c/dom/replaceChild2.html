@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Replace</title>
+</head>
+<body>
+	<p>Lorem <b>ipsum</b> dolor sit amet, <b>consectetur</b> adipisicing elit. Perferendis dolore incidunt tempore eos ipsam aut exercitationem labore illo facere esse non culpa dolorum soluta temporibus suscipit quos placeat! Id maiores.</p>
+	<button onclick="removeBold()">Exclui ipsum</button>
+	<script>
+		function removeBold(){
+			var nodePar = document.getElementsByTagName("p")[0];
+			var length = document.getElementsByTagName("b").length;
+			for(var count = 0; count < length; count++){
+				var textcount = document.getElementsByTagName("b")[0].firstChild;
+				console.log(count+" - "+textcount.nodeValue);
+				console.log(document.getElementsByTagName("b").length);
+				nodePar.replaceChild(
+					textcount,
+					document.getElementsByTagName("b")[0]
+				);
+			}
+		}
+	</script>
+
+</body>
+</html>

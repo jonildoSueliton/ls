@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hidden Paragraph</title>
+</head>
+<body>
+	<button onclick="changeVisibility('hidden')">Ocultar</button>
+	<button onclick="changeVisibility('visible')">Exibir</button>
+	<p id="parLorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis facere maiores in modi laudantium sapiente optio autem at ex quisquam nostrum dolore libero rerum cum a ullam culpa hic reiciendis!</p>
+	<script>
+	function changeVisibility(value){
+		document.getElementById("parLorem").style.visibility = value;
+	}
+	</script>
+</body>
+</html>

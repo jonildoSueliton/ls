@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<textarea id="task" cols="30" rows="10"></textarea><br>
+	<button>Agendar Tarefa</button>
+	<ul id="tasks"></ul>
+	<script>
+		function appendTask(){
+			var textNode = document.createTextNode(document.querySelector('#task').value);
+			var listItem = document.createElement('li');
+			listItem.appendChild(textNode);
+			document.querySelector('#tasks').appendChild(listItem);
+		}
+
+		document.querySelector('button').onclick = appendTask;
+	</script>
+</body>
+</html>

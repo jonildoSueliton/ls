@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	<style>
+		input[type=radio] {
+			display: none;
+		}
+		article {
+			display: none;
+		}
+		li {
+			list-style-type: none;
+			display: inline-block;
+		}
+		.pure-button {
+			background-color: #1d5056;
+			color: #fff;
+		}
+		input:checked+.pure-button{
+			background-color: #8ed9d9;
+			color: #2E7979;
+		}
+		.
+	</style>
+</head>
+<body>
+	<section>
+		<!--
+			3 abas
+			http://docs.webplatform.org/wiki/css/properties/visibility
+			https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
+		-->
+		<nav>
+			<ul>
+				<li>
+					<input type="radio" name="tabs" id="aba1" value="aba1" checked>
+					<label class="pure-button" for="aba1">Aba 1</label>
+				</li>
+				<li>
+					<input type="radio" name="tabs" id="aba2" value="aba2">
+					<label class="pure-button" for="aba2">Aba 2</label>
+				</li>
+				<li>
+					<input type="radio" name="tabs" id="aba3" value="aba3">
+					<label class="pure-button" for="aba3">Aba 3</label>
+				</li>
+			</ul>
+		</nav>
+		<section>
+			<article class="aba1" >
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, illum, quo repudiandae laudantium vero aut temporibus corporis ratione laborum numquam soluta totam voluptatem laboriosam nostrum impedit magnam officiis deleniti asperiores.</p>
+			</article>
+			<article class="aba2" >
+				<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+				<p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+				<p>Casamentiss faiz malandris se pirulitá, Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer Ispecialista im mé intende tudis nuam golada, vinho, uiski, carirí, rum da jamaikis, só num pode ser mijis. Adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+				<p>Cevadis im ampola pa arma uma pindureta. Nam varius eleifend orci, sed viverra nisl condimentum ut. Donec eget justis enim. Atirei o pau no gatis. Viva Forevis aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Copo furadis é disculpa de babadis, arcu quam euismod magna, bibendum egestas augue arcu ut est. Delegadis gente finis. In sit amet mattis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis. Pellentesque viverra accumsan ipsum elementum gravidis.</p>
+			</article>
+			<article class="aba3" >
+				<p>Eiiitaaa Mainhaaa!! Esse Lorem ipsum é só na sacanageeem!! E que abundância meu irmão viuu!! Assim você vai matar o papai. Só digo uma coisa, Domingo ela não vai! Danadaa!! Vem minha odalisca, agora faz essa cobra coral subir!!! Pau que nasce torto, Nunca se endireita. Tchannn!! Tchannn!! Tu du du pááá! Eu gostchu muitchu, heinn! danadinha! Mainhaa! Agora use meu lorem ipsum ordinária!!! Olha o quibeee! rema, rema, ordinária!.</p>
+				<p>Você usa o Lorem Ipsum tradicional? Sabe de nada inocente!! Conheça meu lorem que é Tchan, Tchan, Tchannn!! Txu Txu Tu Paaaaa!! Vem, vem ordinária!! Venha provar do meu dendê que você não vai se arrepender. Só na sacanageeem!! Eu gostchu muitchu, heinn! Eitchaaa template cheio de abundância danadaaa!! Assim você mata o papai hein!? Etâaaa Mainhaaaaa...me abusa nesse seu layout, me gera, me geraaaa ordinária!!! Só na sacanagem!!!! Venha provar do meu dendê Tu du du pááá!.</p>
+			</article>
+		</section>
+	</section>
+	<script>
+		document.querySelector('article').style.display = 'block';
+		var labels = document.querySelectorAll('input[type=radio]');
+		for(var labelIndex in labels){
+			labels[labelIndex].onchange = function(){
+				var articles = document.querySelectorAll('article');
+				for(var indexArticle in articles){
+					if(articles[indexArticle].className == this.value)
+						articles[indexArticle].style.display = 'block';	
+					else
+						articles[indexArticle].style.display = 'none';	
+				}
+			}
+	}
+	</script>
+</body>
+</html>

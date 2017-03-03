@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 50% ; width: 50%}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbJ-LcgQmIeDLe2A65lxEgHugrcqmqtc4&sensor=false">
+    </script>
+    <script type="text/javascript">
+      var latitude, longitude;
+
+      function initialize() {
+        if(window.navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        console.log(latitude);
+        console.log(longitude);
+        var myLatlng = new google.maps.LatLng(-7.1357164,-34.874470599999995);
+        // var myLatlng = new google.maps.LatLng(latitude,longitude);
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+        var marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              title:"IFPB"
+          });
+      }
+
+      function showPosition(position){
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+        console.log(latitude);
+        console.log(longitude);
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas"></div>
+  </body>
+</html>

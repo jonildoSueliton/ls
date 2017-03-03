@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>windows</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<style>
+		section {
+			width: 80%;
+			margin: 30px auto ;
+			border-radius: 10px;
+			box-shadow: 3px 3px 10px #000;
+			padding: 1%;
+		}
+		.fa-print {
+			float: right;
+			margin-top: 23px;
+			margin-right: 20px;
+			-webkit-transition: -webkit-transform 0.2s linear;
+		}
+		.fa-times {
+			float: right;
+			margin-top: 23px;
+			margin-right: 40px;
+			-webkit-transition: -webkit-transform 0.2s linear;
+		}
+		.fa-print:hover, .fa-times:hover {
+			-webkit-transform: scale(1.4);
+		}
+		h2 {
+			display: inline-block;
+		}
+		@media print {
+			.fa-print {
+				display: none;
+			}
+			section {
+				visibility: hidden;
+			}
+			section * {
+				visibility: visible;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<i class="fa fa-print fa-2x"></i>
+		<i class="fa fa-times fa-2x"></i>
+		<h2>Lorem Ipsum</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, aliquam corporis ipsum atque quae quidem mollitia error suscipit. Ducimus modi qui praesentium impedit distinctio! Odit libero magni consequatur at excepturi.</p>
+		<p>Odit, autem tenetur quae corrupti inventore magnam nisi et quis ea unde eaque quidem pariatur est ipsam sequi delectus illo rerum cupiditate fugiat modi eveniet assumenda officia dolores nostrum excepturi.</p>
+		<p>Accusamus nam enim saepe ut architecto nobis animi autem. Earum, vel, quibusdam voluptas voluptate cumque laudantium sit nostrum eum iure minima facere tenetur dolore consectetur nemo autem rem officiis totam?</p>
+		<p>Eos, assumenda, ad quod voluptate cum atque itaque maiores eveniet culpa quia consectetur ullam excepturi placeat asperiores voluptas! Dolore voluptatum amet molestiae delectus dolor. Nihil excepturi ipsa voluptas quibusdam maxime!</p>
+		<p>Quae, repellat, odit provident quisquam reiciendis enim nulla iure harum unde facere perspiciatis consectetur commodi hic ullam repudiandae porro sed qui illum deleniti quasi quaerat iste modi. Perspiciatis, reprehenderit, repellat.</p>
+		<p id="testando">Beatae voluptates <b>modi</b> commodi mollitia. Repudiandae, nisi, necessitatibus, doloremque, nostrum mollitia illum totam aut harum id iure sequi alias autem quisquam aliquam quibusdam sint possimus hic similique ipsa soluta incidunt.</p>
+	</section>
+	<script>
+	document.querySelector(".fa-print").onclick = function(){
+		window.print();
+	}
+	document.querySelector(".fa-times").onclick = function(){
+		if(window.confirm("Deseja realmente fechar a janela?"))
+			window.close();
+	}
+	</script>
+</body>
+</html>

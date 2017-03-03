@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+	<input type="checkbox" name="" id="">Item 1<br>
+	<input type="checkbox" name="" id="">Item 2<br>
+	<input type="checkbox" name="" id="">Item 3<br>
+	<input type="checkbox" name="" id="">Item 4<br>
+	<input type="checkbox" name="" id="">Item 5<br>
+	<i class="fa fa-check-square-o"></i>
+	<i class="fa fa-square-o"></i>
+	<script>
+		function markCheckbox(mark){
+			var checks = document.querySelectorAll("input");
+			for(var index in checks)
+				checks[index].checked = mark;
+		}
+		document.querySelector(".fa-check-square-o").onclick = function(){
+			markCheckbox(true);
+		}
+		document.querySelector(".fa-square-o").onclick = function(){
+			markCheckbox(false);
+		}
+	</script>
+</body>
+</html>

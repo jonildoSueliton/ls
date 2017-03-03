@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parágrafos</title>
+	<style>
+		section#par {
+			width: 60%;
+			background-color: #ace1bb;
+			text-align: justify;
+		}
+		section#total {
+			background-color: #3aa55a;
+			width: 30%;
+			height: 200px;
+			float: right;
+		}
+		section{
+			margin: 30px 8px;
+			padding: 2px 15px;
+			border-radius: 10px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<section id="par">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, a, sapiente nam ipsa quidem quas deleniti error tempora excepturi explicabo dolorum fugiat commodi numquam beatae saepe obcaecati molestiae? Placeat, praesentium!</p>
+		<p>Commodi, blanditiis, rerum asperiores dolorum voluptas neque at tenetur inventore suscipit accusantium illo perferendis quas maiores incidunt ipsam et minus dolore distinctio possimus doloribus quod quis aspernatur veritatis obcaecati facilis.</p>
+		<p>Nam, cum, voluptates, harum totam est facilis ab animi distinctio iusto voluptatem ut dolor dignissimos quaerat saepe itaque aliquam sunt odio inventore voluptatibus iure quae magni commodi earum optio fugiat.</p>
+		<p>Officiis, modi, alias labore ipsum officia amet quaerat tenetur unde ea aliquid quia asperiores veniam. Consequuntur, saepe, possimus, earum voluptas quod cum at sunt nam ullam asperiores doloribus aliquid maxime.</p>
+		<p>Minima, magni, fugit facilis a vel nisi maiores mollitia ducimus autem eum labore ullam laudantium eveniet eligendi tempore saepe dignissimos quod quo illum voluptatibus vero ipsam sint quasi repellendus quisquam!</p>
+		<p>Dolorem, consequatur, nesciunt doloremque placeat recusandae libero provident ratione dolorum minus in aspernatur culpa similique fugit tempora iure facilis distinctio inventore amet expedita fuga quidem quia quibusdam. Ab, repellat, eligendi.</p>
+		<p>Pariatur, molestias, recusandae, aut consequatur voluptates accusamus repellat totam temporibus facilis harum omnis voluptate quisquam accusantium sed illo. Nisi, totam, dolore nihil aliquid laudantium ea nobis sed fuga veritatis excepturi!</p>
+		<p>Tenetur, tempora est perferendis voluptatibus fugiat. Ipsa nemo dolor veniam sit voluptas quis. Dicta, unde, voluptatum, cupiditate cumque adipisci incidunt et neque a autem nihil explicabo quas nisi velit saepe.</p>
+		<p>Error, quia, fuga, quos laboriosam molestiae sed obcaecati rerum commodi aperiam perferendis et provident distinctio odio ad velit tempora perspiciatis fugit neque voluptatum dicta labore voluptas quod libero ut mollitia.</p>
+		<p>Aut harum sint accusamus id mollitia aspernatur blanditiis maiores? Recusandae, mollitia, vel, odio similique adipisci ducimus id ratione voluptate dignissimos asperiores esse cumque voluptates incidunt dolorem quibusdam omnis modi libero.</p>
+	</section>
+	<section id="total">
+		<p>O total de parágrafos é:</p> 
+	</section>
+	<script>
+		document.querySelector("#total p").innerHTML +=
+		document.querySelectorAll("#par p").length;
+	</script>
+</body>
+</html>

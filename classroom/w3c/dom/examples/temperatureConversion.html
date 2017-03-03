@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Converção de Temperatura</title>
+</head>
+<body>
+	<h2>Converção de Temperatura</h2>
+	<input type="text" id="initialConverValue">
+	<select id="initialConverTemp">
+		<option value="C">C</option>
+		<option value="F">F</option>
+		<option value="k">k</option>
+	</select>
+	<input type="text" id="finalConverValue">
+	<select id="finalConverTemp">
+		<option value="C">C</option>
+		<option value="F">F</option>
+		<option value="k">k</option>
+	</select>
+	<script>
+		document.querySelector("#initialConverValue").onkeyup = function(){
+			document.querySelector("#finalConverValue").value = this.value;
+			document.querySelector("#initialConverTemp").value
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Notícias de TSI</h1>
+	<textarea name="text" id="text" cols="30" rows="10"></textarea><br>
+	<input type="checkbox" name="hot" id="hot">Importante
+	<input type="button" value="Criar notícia" onclick="append()">
+	<div id="hotContent"></div>
+	<div id="normalContent"></div>
+	<script>
+	function append(){
+		var text = document.createTextNode(document.querySelector("#text").value);
+		var paragraph = document.createElement("p");
+		paragraph.appendChild(text);
+		if(document.querySelector("#hot").checked){
+			document.querySelector("#hotContent").appendChild(paragraph);
+		} else {
+			document.querySelector("#normalContent").appendChild(paragraph);
+		}
+
+	}
+	</script>
+</body>
+</html>

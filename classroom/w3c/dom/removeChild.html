@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Remove</title>
+</head>
+<body>
+	<p>Lorem <b>ipsum</b> dolor sit amet, consectetur adipisicing elit. Perferendis dolore incidunt tempore eos ipsam aut exercitationem labore illo facere esse non culpa dolorum soluta temporibus suscipit quos placeat! Id maiores.</p>
+	<button onclick="removeBold()">Exclui ipsum</button>
+	<script>
+	function removeBold(){
+		document.getElementsByTagName("p")[0]
+			.removeChild(document.getElementsByTagName("b")[0]);
+	}
+	</script>
+
+</body>
+</html>

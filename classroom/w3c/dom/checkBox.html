@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CheckBox Object</title>
+</head>
+<body>
+	<form name="form">
+		<input type="checkbox" name="disciplinas">Valor 1<br>
+		<input type="checkbox" name="disciplinas">Valor 2<br>
+		<input type="checkbox" name="disciplinas">Valor 3<br>
+		<input type="checkbox" name="disciplinas">Valor 4<br>
+		<input type="checkbox" name="disciplinas">Valor 5<br>
+	</form>
+	<button onclick="checkAll(true)">Marcar Todos</button>
+	<button onclick="checkAll(false)">Desmarcar Todos</button>
+	<script>
+		function checkAll(value){
+			var checkBoxes = document.forms.form.disciplinas;
+			for(var index in checkBoxes)
+				checkBoxes[index].checked = value;
+		}
+	</script>
+</body>
+</html>

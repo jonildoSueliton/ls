@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="range" name="" id="range" value="10">
+	<span id="value">10</span>
+	<script>
+		document.querySelector('#range').onchange=function(){
+			document.querySelector('#value').innerHTML = this.value;
+		};
+		document.querySelector('#range').onload=function(){
+			document.querySelector('#value').innerHTML = this.value;console.log('foi'+this.value)
+		};
+	</script>
+</body>
+</html>

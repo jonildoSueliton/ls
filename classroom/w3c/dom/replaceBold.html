@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Lorem ipsum <b>dolor</b> sit amet, <b>consectetur</b> adipisicing elit. Id, doloremque, iusto, reprehenderit repudiandae doloribus <b>veritatis</b> consequatur quaerat repellendus hic laborum inventore quidem qui assumenda libero tempore recusandae quisquam sequi perferendis.</p>
+	<button id="action">Detona Negrito</button>
+	<script>
+	function detona(){
+		var paragraph = document.querySelector("p");
+		var bolds = document.querySelectorAll("b");
+		var content;
+		var size = bolds.length;
+		for(var flag = size; flag--;){
+			content = bolds[flag].firstChild;
+			paragraph.replaceChild(content, bolds[flag]);
+		}
+	}
+	document.querySelector("#action").onclick = detona;
+	</script>
+</body>
+</html>

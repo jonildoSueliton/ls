@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Change Image</title>
+</head>
+<body>
+	<img src="bomb1.gif" alt="Bomba" onclick="changeSrc(this, 'bomb3.gif')" onmouseover="changeSrc(this, 'bomb2.gif')">
+	<script>
+	function changeSrc(image, fileName){
+		image.src = fileName;
+	}
+	</script>
+</body>
+</html>

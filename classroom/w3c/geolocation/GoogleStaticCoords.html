@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Coords</title>
+	<style>
+		button {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<p>Deseja saber sua localização?</p>
+	<button onclick="getLocation()">Localização</button>
+	<output id="latlog"></output>
+	<script>
+	var output = document.querySelector("#latlog");
+	function getLocation(){
+		if(navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(getPosition, showError);
+		}else{
+			output.innerHTML = "Não suporta geolocation.";
+		}
+	}
+	function getPosition(position){
+		var latlon = position.coords.latitude+","+position.coords.longitude;
+		var url = "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false";
+		output.innerHTML = "<img id=\"mapa\" src=\""+url+"\" alt=\"Mapa\">";
+	}
+	function showError(error){
+	  switch(error.code){
+	    case error.PERMISSION_DENIED:
+	      output.innerHTML="User denied the request for Geolocation."
+	      break;
+	    case error.POSITION_UNAVAILABLE:
+	      output.innerHTML="Location information is unavailable."
+	      break;
+	    case error.TIMEOUT:
+	      output.innerHTML="The request to get user location timed out."
+	      break;
+	    case error.UNKNOWN_ERROR:
+	      output.innerHTML="An unknown error occurred."
+	      break;
+	    }
+	  }
+	</script>
+</body>
+</html>

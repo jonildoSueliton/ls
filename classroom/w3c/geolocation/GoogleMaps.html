@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Google Maps</title>
+	<style>
+		div#mapa {
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAbJ-LcgQmIeDLe2A65lxEgHugrcqmqtc4&sensor=false">
+</script>
+</head>
+<body>
+	<div id="mapa"></div>
+	<script>
+		function initialize(){
+			var latlgn = new google.maps.LatLng(51.508742,-0.120850);
+			var mapProp = {
+				center: latlgn,
+				zoom:5,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("mapa"),mapProp);
+			var marker = new google.maps.Marker({
+			  	position:latlgn,
+			});
+			marker.setMap(map);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize)
+	</script>
+</body>
+</html>

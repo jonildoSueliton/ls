@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Radio</title>
+</head>
+<body>
+	<input type="radio" name="info" id="">Texto 1 <br>
+	<input type="radio" name="info" id="">Texto 1 <br>
+	<input type="radio" name="info" id="">Texto 1 <br>
+	<input type="radio" name="info" id="">Texto 1 <br>
+	<input type="radio" name="info" id="check">Outros <input type="text" name="" id="text" value="Blabla" disabled>
+	<script>
+	var radios = document.querySelectorAll("input[type=radio]");
+	for(var flag = 1; flag < radios.length; flag++){
+		radios[flag].onclick = function(){
+			var radio = document.querySelector("#check");
+			var text = document.querySelector("#text");
+			if(radio.checked){
+				text.disabled = false;
+				text.value = "";
+				text.focus();
+			}else{
+				text.disabled = true;
+				text.value = "Blabla";
+			}
+		}
+	}
+	</script>
+</body>
+</html>

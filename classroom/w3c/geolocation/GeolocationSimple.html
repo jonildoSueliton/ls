@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>Mostrar localização</button>
+	<script>
+		const button = document.querySelector("button");
+
+		button.onclick = function(){
+			if(window.navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}
+		}
+
+		function showPosition(position){
+			console.log(`Lat: ${position.coords.latitude}, Log: ${position.coords.longitude}`);
+		}
+	</script>
+</body>
+</html>

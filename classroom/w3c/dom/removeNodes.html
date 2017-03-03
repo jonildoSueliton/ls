@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipisicing elit. Pariatur, fugiat, doloribus, <b>voluptatum</b>, vitae id odio adipisci rem amet neque hic dolores magnam <b>perspiciatis</b> cumque itaque ea. Velit excepturi quos quia!</p>
+	<p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipisicing elit. Pariatur, fugiat, doloribus, <b>voluptatum</b>, vitae id odio adipisci rem amet neque hic dolores magnam <b>perspiciatis</b> cumque itaque ea. Velit excepturi quos quia!</p>
+	<p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipisicing elit. Pariatur, fugiat, doloribus, <b>voluptatum</b>, vitae id odio adipisci rem amet neque hic dolores magnam <b>perspiciatis</b> cumque itaque ea. Velit excepturi quos quia!</p>
+	<button>Remover Palavras em Negrito</button>
+	<script>
+	document.querySelector('button').onclick = function(){
+		var paragraphs = Array.prototype.slice.call(document.querySelectorAll('p'));
+		paragraphs.forEach(function(p){
+			var bolds = Array.prototype.slice.call(p.querySelectorAll('b'));
+			bolds.forEach(function(bold){
+				p.removeChild(bold);
+			})
+		})
+	}
+	</script>
+</body>
+</html>

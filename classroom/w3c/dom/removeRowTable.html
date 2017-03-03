@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Remove Row</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Item 1</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td><img src="dash_remove_icon.png" alt="remove row" onclick="removeRow(this)"></td>
+		</tr>
+		<tr>
+			<td>Item 2</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td><img src="dash_remove_icon.png" alt="remove row" onclick="removeRow(this)"></td>
+		</tr>
+		<tr>
+			<td>Item 3</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td><img src="dash_remove_icon.png" alt="remove row" onclick="removeRow(this)"></td>
+		</tr>
+		<tr>
+			<td>Item 4</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td><img src="dash_remove_icon.png" alt="remove row" onclick="removeRow(this)"></td>
+		</tr>
+		<tr>
+			<td>Item 5</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td><img src="dash_remove_icon.png" alt="remove row" onclick="removeRow(this)"></td>
+		</tr>
+		<tr>
+			<td>Item 6</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td><img src="dash_remove_icon.png" alt="remove row" onclick="removeRow(this)"></td>
+		</tr>
+	</table>
+	<script>
+	function removeRow(image){
+		var rowNode   = image.parentNode.parentNode;
+		var tableNode = rowNode.parentNode;
+		tableNode.removeChild(rowNode);
+	}
+	</script>
+</body>
+</html>

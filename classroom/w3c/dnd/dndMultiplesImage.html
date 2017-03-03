@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DnD</title>
+	<style>
+	div {
+		border: dashed 3px #808080;
+		width: 30%;
+		height: 50px;
+		text-align: center;
+		font: 2em bold;
+		color: #808080;
+		padding: 10px;
+	}
+	img {
+		margin: 10px;
+	}
+	</style>
+</head>
+<body>
+	<div id="drag" ondragover="allowDrop(event)" ondrop="drop(event)">Arraste uma imagem</div>
+	<img id="chrome" src="compatible_chrome.gif" alt="Browser">
+	<img id="safari" src="compatible_safari.gif" alt="Browser">
+	<img id="firefox" src="compatible_firefox.gif" alt="Browser">
+	<img id="opera" src="compatible_opera.gif" alt="Browser">
+	<img id="ie" src="compatible_ie.gif" alt="Browser">
+	<script>
+	var imgs = document.getElementsByTagName("img");
+	for(var index in imgs){
+		imgs[index].setAttribute("draggable", true);
+		imgs[index].ondragstart = recordImgId;
+	}
+
+	function recordImgId(ev){
+		ev.dataTransfer.setData("divId", ev.target.id)
+	}
+
+	function allowDrop(ev){
+		ev.preventDefault();
+	}
+
+	function drop(ev){
+		var id = ev.dataTransfer.getData("divId");
+		if(document.getElementById("drag").firstChild.nodeType == 3)
+			document.getElementById("drag").innerHTML = "";
+		document.getElementById("drag").appendChild(document.getElementById(id));
+	}
+	</script>
+</body>
+</html>

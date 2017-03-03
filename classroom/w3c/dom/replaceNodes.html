@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipisicing elit. Iure, minima, suscipit alias <b>exercitationem</b> aliquid reprehenderit ad tempore eius odio ratione voluptas quos beatae expedita obcaecati molestiae veniam harum rerum. Vel!</p>
+	<button>Remover apenas negrito</button>
+	<script>
+	document.querySelector('button').onclick = function(){
+		var p = document.querySelector('p');
+		var bolds = Array.prototype.slice.call(p.querySelectorAll('b'));
+		bolds.forEach(function(bold){
+			var newNode = bold.firstChild;
+			p.replaceChild(newNode, bold);
+		});
+	};
+	</script>
+</body>
+</html>

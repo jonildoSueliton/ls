@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabela</title>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<style>
+		td, th {
+			border: solid 1px #000;
+		}
+		th {
+			background-color: #000;
+			color: #fff;
+		}
+		i:hover {
+			color: #555;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th colspan="6">Tabela do Balacubaco</th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="remove" id=""></td>
+			<td>Item 1</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="icon-remove-sign"></i></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="remove" id=""></td>
+			<td>Item 2</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="icon-remove-sign"></i></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="remove" id=""></td>
+			<td>Item 3</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="icon-remove-sign"></i></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="remove" id=""></td>
+			<td>Item 4</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="icon-remove-sign"></i></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="remove" id=""></td>
+			<td>Item 5</td>
+			<td>Item 2</td>
+			<td>Item 3</td>
+			<td>Item 4</td>
+			<td><i class="icon-remove-sign"></i></td>
+		</tr>
+	</table>
+	<i class="icon-check" id="markAll"></i>
+	<i class="icon-check-empty" id="unmarkAll"></i>
+	<i class="icon-remove-sign" id="removeAll"></i>
+	<script>
+		function removeRow(element){
+			var row = element.parentNode.parentNode;
+			var table = row.parentNode;
+			table.removeChild(row);
+		}
+
+		var removesImgs = document.querySelectorAll("tr .icon-remove-sign");
+		
+		for(var flag = 0; flag < removesImgs.length; flag++){
+			removesImgs[flag].onclick = function(){
+				removeRow(this);
+			}
+		}
+		var markAllBut = document.querySelector("#markAll");
+		markAllBut.onclick = markAllElements;
+
+		function markAllElements(){
+			var checkboxes = document.querySelectorAll("input[type=checkbox]");
+			for(var index in checkboxes){
+				checkboxes[index].checked = true;
+			}
+		}
+		
+		var unmarkAllBut = document.querySelector("#unmarkAll");
+		unmarkAllBut.onclick = unmarkAllElements;
+
+		function unmarkAllElements(){
+			var checkboxes = document.querySelectorAll("input[type=checkbox]");
+			for(var index in checkboxes){
+				checkboxes[index].checked = false;
+			}
+		}
+
+		var removeAll = document.querySelector("#removeAll");
+		removeAll.onclick = function(){
+			var checkedBoxes = document.querySelectorAll("input[type=checkbox]:checked");
+			for(var index in checkedBoxes){
+				removeRow(checkedBoxes[index]);
+			}
+
+		}
+	</script>
+</body>
+</html>

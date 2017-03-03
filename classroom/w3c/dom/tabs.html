@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			background: #78d284;
+			font-family: helvetica, sans-serif;
+			color: #fff;
+		}
+		label {
+			display: inline-block;
+			width: 10%;
+			background: #78d284;
+			text-decoration: none;
+			
+			text-align: center;
+		}
+		label, div {
+			padding: .3%;
+			border-radius: 5px;
+			border: 2px solid #fff;
+		}
+		input {
+			display: none;
+		}
+		input:checked+label {
+			background: #abe3ae;
+			color:#2d8751;
+		}
+		div {
+			margin-top: 1%;
+			display: none;
+			background: #abe3ae;
+			color:#2d8751;
+		}
+	</style>
+</head>
+<body>
+	<input type="radio" name="menu" id="link-1" checked>
+	<label for="link-1">Link 1</label>
+	<input type="radio" name="menu" id="link-2">
+	<label for="link-2">Link 2</label>
+	<input type="radio" name="menu" id="link-3">
+	<label for="link-3">Link 3</label>
+	<div id="content1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, culpa, mollitia, modi animi velit omnis incidunt ratione labore consequatur commodi fuga temporibus quia eius molestias possimus. Doloribus illo officia repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro, vero, atque, aliquid tempora aspernatur nihil corrupti repudiandae ut quam recusandae at sunt! Impedit, vero earum perferendis tenetur explicabo incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, culpa, mollitia, modi animi velit omnis incidunt ratione labore consequatur commodi fuga temporibus quia eius molestias possimus. Doloribus illo officia repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro, vero, atque, aliquid tempora aspernatur nihil corrupti repudiandae ut quam recusandae at sunt! Impedit, vero earum perferendis tenetur explicabo incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, culpa, mollitia, modi animi velit omnis incidunt ratione labore consequatur commodi fuga temporibus quia eius molestias possimus. Doloribus illo officia repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro, vero, atque, aliquid tempora aspernatur nihil corrupti repudiandae ut quam recusandae at sunt! Impedit, vero earum perferendis tenetur explicabo incidunt.</div>
+	<div id="content2">Eius, voluptatum, vel quisquam alias aliquam officiis aperiam molestiae consequuntur illum cumque sapiente dignissimos accusamus cum. Optio, autem, debitis minima possimus quasi accusantium mollitia enim quaerat soluta dolor est iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, culpa, mollitia, modi animi velit omnis incidunt ratione labore consequatur commodi fuga temporibus quia eius molestias possimus. Doloribus illo officia repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro, vero, atque, aliquid tempora aspernatur nihil corrupti repudiandae ut quam recusandae at sunt! Impedit, vero earum perferendis tenetur explicabo incidunt.</div>
+	<div id="content3">Numquam, necessitatibus impedit sit animi corporis asperiores velit amet illo nobis dolor porro quisquam accusamus voluptates reiciendis dolore odit in eum tempora rem ad aliquid praesentium dolores deleniti eos perspiciatis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, culpa, mollitia, modi animi velit omnis incidunt ratione labore consequatur commodi fuga temporibus quia eius molestias possimus. Doloribus illo officia repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro, vero, atque, aliquid tempora aspernatur nihil corrupti repudiandae ut quam recusandae at sunt! Impedit, vero earum perferendis tenetur explicabo incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, culpa, mollitia, modi animi velit omnis incidunt ratione labore consequatur commodi fuga temporibus quia eius molestias possimus. Doloribus illo officia repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro, vero, atque, aliquid tempora aspernatur nihil corrupti repudiandae ut quam recusandae at sunt! Impedit, vero earum perferendis tenetur explicabo incidunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, culpa, mollitia, modi animi velit omnis incidunt ratione labore consequatur commodi fuga temporibus quia eius molestias possimus. Doloribus illo officia repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro, vero, atque, aliquid tempora aspernatur nihil corrupti repudiandae ut quam recusandae at sunt! Impedit, vero earum perferendis tenetur explicabo incidunt.</div>
+	<script>
+
+		function selectContent(){
+			var number = this.id.split("-")[1];
+			var divs = document.querySelectorAll("div");
+			for(var index in divs){
+				if(divs[index].id == "content"+number){
+					divs[index].style.display = "block";
+				} else if(index != "length" & index != "item") {
+					divs[index].style.display = "none";
+				}
+			}
+		}
+
+		var radios = document.querySelectorAll("input[type=radio]");
+		for(var index in radios){
+			radios[index].onclick = selectContent;
+		}
+
+		document.querySelector("#content1").style.display = "block";
+	</script>
+</body>
+</html>
